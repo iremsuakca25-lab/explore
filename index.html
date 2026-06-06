@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="EXPLORE — Dijital Gezi ve Keşif Platformu. Dünyanın en güzel rotalarını, şehirlerini ve deneyimlerini keşfedin.">
+    <title>EXPLORE — Dijital Gezi ve Keşif Platformu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="images/istanbul_hero.jpg" fetchpriority="high">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="style.css?v=2.1">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-text">
+                <span class="preloader-letter">E</span>
+                <span class="preloader-letter">X</span>
+                <span class="preloader-letter">P</span>
+                <span class="preloader-letter">L</span>
+                <span class="preloader-letter">O</span>
+                <span class="preloader-letter">R</span>
+                <span class="preloader-letter">E</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">EXPLORE</a>
+            <div class="nav-links">
+                <a href="#routes" class="nav-link">Rotalar</a>
+                <a href="#cities" class="nav-link">Şehirler</a>
+                <a href="#experiences" class="nav-link">Deneyimler</a>
+                <a href="#stories" class="nav-link">Hikâyeler</a>
+                <a href="#guides" class="nav-link">Rehberler</a>
+            </div>
+            <button class="nav-cta" id="nav-cta-btn">Keşfet</button>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#routes" class="mobile-link">Rotalar</a>
+            <a href="#cities" class="mobile-link">Şehirler</a>
+            <a href="#experiences" class="mobile-link">Deneyimler</a>
+            <a href="#stories" class="mobile-link">Hikâyeler</a>
+            <a href="#guides" class="mobile-link">Rehberler</a>
+            <a href="#cta" class="mobile-link mobile-cta-link">Keşfetmeye Başla →</a>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SECTION 1: HERO
+    ========================================= -->
+    <section id="hero" class="section-hero">
+        <div class="hero-bg">
+            <div class="hero-bg-image" id="hero-bg-1"></div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Slogan -->
+        <div class="hero-slogan">
+            <span class="hero-slogan-line">ZAMANSIZ</span>
+            <span class="hero-slogan-line hero-slogan-bold">YOLCULUKLAR</span>
+        </div>
+
+        <div class="hero-bottom">
+            <a href="#routes" class="hero-cta" id="hero-cta-btn">
+                <span>Keşfetmeye Başla</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 2: ROTALAR
+    ========================================= -->
+    <section id="routes" class="section-routes">
+        <div class="section-header">
+            <span class="section-label">ROTALAR</span>
+            <div class="section-header-top">
+                <h2 class="section-title routes-title">
+                    <span class="title-line">Dünyanın her köşesinde</span>
+                    <span class="title-line">keşfedilecek bir <em>hikâye</em> var.</span>
+                </h2>
+                <div class="category-tabs" id="routes-tabs">
+                    <button class="tab-btn active" data-target="routes-domestic">Yurtiçi</button>
+                    <button class="tab-btn" data-target="routes-international">Yurtdışı</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="routes-scroll-container">
+            <!-- YURTİÇİ ROTALAR -->
+            <div class="routes-track active-track" id="routes-domestic">
+                <!-- Card: Kapadokya -->
+                <div class="route-card" data-route="kapadokya">
+                    <div class="route-card-image">
+                        <img src="images/cappadocia.jpg" alt="Kapadokya Macerası" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Nisan — Ekim</span>
+                        <h3 class="route-name">Kapadokya Macerası</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>5 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Orta</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Peri bacalarından balon turlarına, yeraltı şehirlerinden antik kiliselere
+                            uzanan büyülü bir rota.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Ege -->
+                <div class="route-card" data-route="ege">
+                    <div class="route-card-image">
+                        <img src="images/aegean_coast.jpg" alt="Ege Kıyıları" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Mayıs — Eylül</span>
+                        <h3 class="route-name">Ege Kıyıları</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>7 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Kolay</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Turkuaz koylardan antik kentlere, zeytinliklerden butik otellere uzanan
+                            huzurlu bir Akdeniz yolculuğu.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Karadeniz -->
+                <div class="route-card" data-route="karadeniz">
+                    <div class="route-card-image">
+                        <img src="images/blacksea_highlands.jpg" alt="Karadeniz Yaylaları" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Haziran — Ağustos</span>
+                        <h3 class="route-name">Karadeniz Yaylaları</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>6 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Zor</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Sisli yaylalar, yeşil vadiler, ahşap yayla evleri ve eşsiz doğa
+                            manzaraları.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: İstanbul -->
+                <div class="route-card" data-route="istanbul">
+                    <div class="route-card-image">
+                        <img src="images/istanbul_panorama.jpg" alt="İstanbul Tarih Rotası" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Tüm Yıl</span>
+                        <h3 class="route-name">İstanbul Tarih Rotası</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>4 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Kolay</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Bizans'tan Osmanlı'ya, tarihi yarımadadan Boğaz kıyılarına uzanan kültürel
+                            bir yolculuk.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Kars -->
+                <div class="route-card" data-route="kars">
+                    <div class="route-card-image">
+                        <img src="images/kars.jpg" alt="Doğu Ekspresi" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Aralık — Mart</span>
+                        <h3 class="route-name">Doğu Ekspresi</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>3 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Kolay</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Karlarla kaplı Anadolu manzaraları eşliğinde unutulmaz bir tren yolculuğu
+                            ve Ani Harabeleri.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YURTDIŞI ROTALAR -->
+            <div class="routes-track" id="routes-international" style="display: none;">
+                <!-- Card: Kyoto -->
+                <div class="route-card" data-route="kyoto_route">
+                    <div class="route-card-image">
+                        <img src="images/kyoto_temple.jpg" alt="Kyoto Zen Rotası" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Mart — Kasım</span>
+                        <h3 class="route-name">Kyoto Zen Rotası</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>6 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Kolay</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Antik tapınaklar, bambu ormanları ve geleneksel çay evleriyle huzur dolu
+                            bir Japonya keşfi.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Paris -->
+                <div class="route-card" data-route="paris_route">
+                    <div class="route-card-image">
+                        <img src="images/paris_cityscape.jpg" alt="Paris Sanat Rotası" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Tüm Yıl</span>
+                        <h3 class="route-name">Paris Sanat Rotası</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>4 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Orta</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Louvre'dan Montmartre sokaklarına, Seine nehri kıyısında romantik ve
+                            sanatsal bir yolculuk.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Roma -->
+                <div class="route-card" data-route="rome_route">
+                    <div class="route-card-image">
+                        <img src="images/rome.jpg" alt="Roma Antik Keşfi" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Nisan — Ekim</span>
+                        <h3 class="route-name">Roma Antik Keşfi</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>5 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Kolay</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Kolezyum'dan Trevi Çeşmesi'ne uzanan, tarih ve eşsiz İtalyan lezzetleriyle
+                            dolu bir yolculuk.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: İsviçre -->
+                <div class="route-card" data-route="swiss_route">
+                    <div class="route-card-image">
+                        <img src="images/swiss.jpg" alt="İsviçre Alpleri" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Haziran — Eylül</span>
+                        <h3 class="route-name">İsviçre Alpleri</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>6 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Zor</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Buzul gölleri, ahşap dağ evleri ve muhteşem doğa yürüyüşleriyle kusursuz
+                            bir dinlenme.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Card: Mısır -->
+                <div class="route-card" data-route="egypt_route">
+                    <div class="route-card-image">
+                        <img src="images/egypt.jpg" alt="Mısır Piramitleri" loading="lazy">
+                        <div class="route-card-overlay"></div>
+                    </div>
+                    <div class="route-card-content">
+                        <span class="route-season">Ekim — Nisan</span>
+                        <h3 class="route-name">Mısır Piramitleri</h3>
+                        <div class="route-meta">
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                                <span>5 Gün</span>
+                            </div>
+                            <div class="route-meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                                <span>Orta</span>
+                            </div>
+                        </div>
+                        <p class="route-desc">Çöllerin ortasında yükselen devasa piramitler ve Nil Nehri boyunca antik
+                            firavunların izleri.</p>
+                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 3: ŞEHİRLER
+    ========================================= -->
+    <section id="cities" class="section-cities">
+        <div class="section-header">
+            <span class="section-label">ŞEHİRLER</span>
+            <div class="section-header-top">
+                <h2 class="section-title cities-title">
+                    <span class="title-line">Şehirler sadece bir yer değil,</span>
+                    <span class="title-line">bir <em>deneyimdir.</em></span>
+                </h2>
+                <div class="category-tabs" id="cities-tabs">
+                    <button class="tab-btn active" data-target="cities-domestic">Yurtiçi</button>
+                    <button class="tab-btn" data-target="cities-international">Yurtdışı</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- YURTİÇİ ŞEHİRLER -->
+        <div class="cities-grid active-grid" id="cities-domestic">
+            <div class="city-card city-card-large" id="city-istanbul" data-city="İstanbul">
+                <img src="images/istanbul_panorama.jpg" alt="İstanbul" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">İstanbul</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Tarih</span>
+                        <span class="city-tag">Gastronomi</span>
+                        <span class="city-tag">Kültür</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-cappadocia" data-city="Kapadokya">
+                <img src="images/cappadocia.jpg" alt="Kapadokya" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">Kapadokya</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Doğa</span>
+                        <span class="city-tag">Tarih</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-izmir" data-city="İzmir">
+                <img src="images/aegean_coast.jpg" alt="İzmir" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">İzmir</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Deniz</span>
+                        <span class="city-tag">Kültür</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-rize" data-city="Rize">
+                <img src="images/blacksea_highlands.jpg" alt="Rize" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">Rize</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Doğa</span>
+                        <span class="city-tag">Macera</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-fethiye" data-city="Fethiye">
+                <img src="images/parasut.jpg" alt="Fethiye" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">Fethiye</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Macera</span>
+                        <span class="city-tag">Deniz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-kars" data-city="Kars">
+                <img src="images/kars.jpg" alt="Kars" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Türkiye</span>
+                    <h3 class="city-name">Kars</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Kış</span>
+                        <span class="city-tag">Tarih</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YURTDIŞI ŞEHİRLER -->
+        <div class="cities-grid" id="cities-international" style="display: none;">
+            <div class="city-card city-card-large" id="city-paris" data-city="Paris">
+                <img src="images/paris_cityscape.jpg" alt="Paris" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Fransa</span>
+                    <h3 class="city-name">Paris</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Sanat</span>
+                        <span class="city-tag">Romantizm</span>
+                        <span class="city-tag">Gastronomi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-kyoto" data-city="Kyoto">
+                <img src="images/kyoto_temple.jpg" alt="Kyoto" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Japonya</span>
+                    <h3 class="city-name">Kyoto</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Zen</span>
+                        <span class="city-tag">Doğa</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-rome" data-city="Roma">
+                <img src="images/rome.jpg" alt="Roma" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">İtalya</span>
+                    <h3 class="city-name">Roma</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Tarih</span>
+                        <span class="city-tag">Kültür</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-reykjavik" data-city="Reykjavik">
+                <img src="images/reykjavik_nature.jpg" alt="Reykjavik" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">İzlanda</span>
+                    <h3 class="city-name">Reykjavik</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Doğa</span>
+                        <span class="city-tag">Macera</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-santorini" data-city="Santorini">
+                <img src="images/santorini_view.jpg" alt="Santorini" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Yunanistan</span>
+                    <h3 class="city-name">Santorini</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Romantizm</span>
+                        <span class="city-tag">Deniz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-card" id="city-marrakech" data-city="Marrakech">
+                <img src="images/marrakech_market.jpg" alt="Marrakech" loading="lazy">
+                <div class="city-card-overlay"></div>
+                <div class="city-card-content">
+                    <span class="city-country">Fas</span>
+                    <h3 class="city-name">Marrakech</h3>
+                    <div class="city-experiences">
+                        <span class="city-tag">Kültür</span>
+                        <span class="city-tag">Baharat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 4: DENEYİMLER
+    ========================================= -->
+    <section id="experiences" class="section-experiences">
+        <div class="section-header">
+            <span class="section-label">DENEYİMLER</span>
+        </div>
+
+        <div class="experiences-container">
+            <div class="experience-item" id="exp-macera" data-color="#D68A53">
+                <h3 class="experience-word">MACERA</h3>
+                <div class="experience-content">
+                    <div class="experience-inner">
+                        <p>Adrenalin dolu aktiviteler, keşfedilmemiş rotalar ve sınırlarını zorlayan deneyimler.</p>
+                        <div class="experience-subcats">
+                            <div class="exp-sub">
+                                <h4>Yurtiçi</h4>
+                                <div class="experience-tags">
+                                    <span>Fethiye Paraşüt</span>
+                                    <span>Kaş Dalış</span>
+                                    <span>Kaçkar Trekking</span>
+                                </div>
+                            </div>
+                            <div class="exp-sub">
+                                <h4>Yurtdışı</h4>
+                                <div class="experience-tags">
+                                    <span>İsviçre Alpler Trekking</span>
+                                    <span>Mısır Çöl Safari</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item" id="exp-kultur" data-color="#A8C08F">
+                <h3 class="experience-word">KÜLTÜR</h3>
+                <div class="experience-content">
+                    <div class="experience-inner">
+                        <p>Tarihi yapılar, müzeler, yerel gelenekler ve medeniyetlerin izinde bir yolculuk.</p>
+                        <div class="experience-subcats">
+                            <div class="exp-sub">
+                                <h4>Yurtiçi</h4>
+                                <div class="experience-tags">
+                                    <span>Kapadokya Yeraltı Şehirleri</span>
+                                    <span>Efes Antik Kenti</span>
+                                    <span>Göbeklitepe</span>
+                                </div>
+                            </div>
+                            <div class="exp-sub">
+                                <h4>Yurtdışı</h4>
+                                <div class="experience-tags">
+                                    <span>Roma Kolezyum</span>
+                                    <span>Paris Louvre</span>
+                                    <span>Mısır Piramitleri</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item" id="exp-lezzet" data-color="#D68A53">
+                <h3 class="experience-word">LEZZET</h3>
+                <div class="experience-content">
+                    <div class="experience-inner">
+                        <p>Yerel mutfaklar, sokak lezzetleri, şarap turları ve gastronomi deneyimleri.</p>
+                        <div class="experience-subcats">
+                            <div class="exp-sub">
+                                <h4>Yurtiçi</h4>
+                                <div class="experience-tags">
+                                    <span>Gaziantep Sokak Lezzetleri</span>
+                                    <span>Urla Şarap Bağları</span>
+                                    <span>Karadeniz Muhlama</span>
+                                </div>
+                            </div>
+                            <div class="exp-sub">
+                                <h4>Yurtdışı</h4>
+                                <div class="experience-tags">
+                                    <span>Roma Pizza al Taglio</span>
+                                    <span>Paris Kruvasan</span>
+                                    <span>Fas Tajini</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item" id="exp-doga" data-color="#A8C08F">
+                <h3 class="experience-word">DOĞA</h3>
+                <div class="experience-content">
+                    <div class="experience-inner">
+                        <p>Ormanlar, dağlar, denizler ve doğanın en saf halini keşfedin.</p>
+                        <div class="experience-subcats">
+                            <div class="exp-sub">
+                                <h4>Yurtiçi</h4>
+                                <div class="experience-tags">
+                                    <span>Rize Yayla Kampı</span>
+                                    <span>Kars Çıldır Gölü</span>
+                                    <span>Yedigöller Sonbahar</span>
+                                </div>
+                            </div>
+                            <div class="exp-sub">
+                                <h4>Yurtdışı</h4>
+                                <div class="experience-tags">
+                                    <span>İzlanda Kuzey Işıkları</span>
+                                    <span>İsviçre Buzul Gölleri</span>
+                                    <span>Santorini Gün Batımı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item" id="exp-sanat" data-color="#D68A53">
+                <h3 class="experience-word">SANAT</h3>
+                <div class="experience-content">
+                    <div class="experience-inner">
+                        <p>Galeriler, sokak sanatı, performans ve yerel sanat atölyeleri.</p>
+                        <div class="experience-subcats">
+                            <div class="exp-sub">
+                                <h4>Yurtiçi</h4>
+                                <div class="experience-tags">
+                                    <span>İstanbul Modern Sanat</span>
+                                    <span>Karaköy Sokak Sanatı</span>
+                                    <span>Ebru Atölyesi</span>
+                                </div>
+                            </div>
+                            <div class="exp-sub">
+                                <h4>Yurtdışı</h4>
+                                <div class="experience-tags">
+                                    <span>Paris Montmartre</span>
+                                    <span>Floransa Rönesans Turu</span>
+                                    <span>Vatikan Müzeleri</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 5: ŞEHİR HİKAYELERİ
+    ========================================= -->
+    <section id="stories" class="section-stories">
+        <div class="section-header">
+            <span class="section-label">HİKÂYELER</span>
+        </div>
+
+        <div class="story-container">
+            <div class="story-visual">
+                <div class="story-image-wrapper">
+                    <img src="images/istanbul_48hours.jpg" alt="İstanbul'da 48 Saat" loading="lazy" id="story-main-img">
+                    <div class="story-image-overlay"></div>
+                </div>
+            </div>
+
+            <div class="story-content">
+                <h2 class="story-main-title">İstanbul'da <br><em>48 Saat</em></h2>
+
+                <div class="story-timeline">
+                    <div class="story-chapter" id="story-morning" data-time="Sabah">
+                        <div class="story-chapter-marker">
+                            <span class="marker-dot"></span>
+                            <span class="marker-line"></span>
+                        </div>
+                        <div class="story-chapter-content">
+                            <h4>Sabah</h4>
+                            <p>Sultanahmet'te güneşin ilk ışıklarıyla uyanın. Ayasofya'nın görkemli kubbesi altında
+                                tarihe dokunun, ardından simit ve çayla güne başlayın.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-chapter" id="story-noon" data-time="Öğle">
+                        <div class="story-chapter-marker">
+                            <span class="marker-dot"></span>
+                            <span class="marker-line"></span>
+                        </div>
+                        <div class="story-chapter-content">
+                            <h4>Öğle</h4>
+                            <p>Kapalıçarşı'nın labirentlerinde kaybolun. Rengarenk baharatlar, el yapımı seramikler ve
+                                yüzyıllık zanaat geleneğiyle tanışın.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-chapter" id="story-evening" data-time="Akşam">
+                        <div class="story-chapter-marker">
+                            <span class="marker-dot"></span>
+                            <span class="marker-line"></span>
+                        </div>
+                        <div class="story-chapter-content">
+                            <h4>Akşam</h4>
+                            <p>Galata Kulesi'nden gün batımını izleyin. Boğaz'ın iki yakasını birleştiren ışıklar,
+                                şehrin büyüsünü gözler önüne serer.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-chapter" id="story-night" data-time="Gece">
+                        <div class="story-chapter-marker">
+                            <span class="marker-dot"></span>
+                            <span class="marker-line"></span>
+                        </div>
+                        <div class="story-chapter-content">
+                            <h4>Gece</h4>
+                            <p>Kadıköy sokaklarında canlı müzik eşliğinde meyhane kültürünü deneyimleyin. Rakı ve meze
+                                ile İstanbul gecelerinin tadını çıkarın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 6: YEREL REHBERLER
+    ========================================= -->
+    <section id="guides" class="section-guides">
+        <div class="section-header">
+            <span class="section-label">REHBERLER</span>
+            <h2 class="section-title guides-title">
+                <span class="title-line">Yerel rehberlerle</span>
+                <span class="title-line">gerçek <em>keşiflere</em> çıkın.</span>
+            </h2>
+        </div>
+
+        <div class="guides-grid">
+            <div class="guide-card" id="guide-card-1">
+                <div class="guide-avatar">
+                    <div class="guide-avatar-inner"
+                        style="background: linear-gradient(135deg, #D68A53 0%, #0E2418 100%);">
+                        <span class="guide-initials">AY</span>
+                    </div>
+                </div>
+                <div class="guide-info">
+                    <h4 class="guide-name">Ahmet Yılmaz</h4>
+                    <span class="guide-specialty">Tarih Rehberi</span>
+                    <p class="guide-bio">20 yıllık deneyimle İstanbul'un gizli tarihî noktalarını keşfettiren uzman
+                        rehber.</p>
+                </div>
+                <div class="guide-hover-content">
+                    <div class="guide-stats">
+                        <div><strong>150+</strong><span>Tur</span></div>
+                        <div><strong>4.9</strong><span>Puan</span></div>
+                    </div>
+                    <a href="mailto:ahmet.yilmaz@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                </div>
+            </div>
+
+            <div class="guide-card" id="guide-card-2">
+                <div class="guide-avatar">
+                    <div class="guide-avatar-inner"
+                        style="background: linear-gradient(135deg, #A8C08F 0%, #0E2418 100%);">
+                        <span class="guide-initials">EK</span>
+                    </div>
+                </div>
+                <div class="guide-info">
+                    <h4 class="guide-name">Elif Kaya</h4>
+                    <span class="guide-specialty">Gastronomi Uzmanı</span>
+                    <p class="guide-bio">Yerel lezzetlerin peşinde, sokak yemeklerinden haute cuisine'e kadar gastronomi
+                        turları.</p>
+                </div>
+                <div class="guide-hover-content">
+                    <div class="guide-stats">
+                        <div><strong>200+</strong><span>Tur</span></div>
+                        <div><strong>5.0</strong><span>Puan</span></div>
+                    </div>
+                    <a href="mailto:elif.kaya@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                </div>
+            </div>
+
+            <div class="guide-card" id="guide-card-3">
+                <div class="guide-avatar">
+                    <div class="guide-avatar-inner"
+                        style="background: linear-gradient(135deg, #D68A53 0%, #A8C08F 100%);">
+                        <span class="guide-initials">MÖ</span>
+                    </div>
+                </div>
+                <div class="guide-info">
+                    <h4 class="guide-name">Mert Özdemir</h4>
+                    <span class="guide-specialty">Fotoğraf Rehberi</span>
+                    <p class="guide-bio">En iyi kadrajları yakalayın. Fotoğraf odaklı turlarla görsel hikâyeler
+                        oluşturun.</p>
+                </div>
+                <div class="guide-hover-content">
+                    <div class="guide-stats">
+                        <div><strong>120+</strong><span>Tur</span></div>
+                        <div><strong>4.8</strong><span>Puan</span></div>
+                    </div>
+                    <a href="mailto:mert.ozdemir@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                </div>
+            </div>
+
+            <div class="guide-card" id="guide-card-4">
+                <div class="guide-avatar">
+                    <div class="guide-avatar-inner"
+                        style="background: linear-gradient(135deg, #A8C08F 0%, #D68A53 100%);">
+                        <span class="guide-initials">ZD</span>
+                    </div>
+                </div>
+                <div class="guide-info">
+                    <h4 class="guide-name">Zeynep Demir</h4>
+                    <span class="guide-specialty">Doğa Rehberi</span>
+                    <p class="guide-bio">Dağlardan denizlere, doğanın kalbinde rehberlik eden macera uzmanı.</p>
+                </div>
+                <div class="guide-hover-content">
+                    <div class="guide-stats">
+                        <div><strong>180+</strong><span>Tur</span></div>
+                        <div><strong>4.9</strong><span>Puan</span></div>
+                    </div>
+                    <a href="mailto:zeynep.demir@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 7: İSTATİSTİKLER
+    ========================================= -->
+    <section id="stats" class="section-stats">
+        <div class="stats-bg-text">EXPLORE</div>
+        <div class="stats-grid">
+            <div class="stat-item" id="stat-1">
+                <span class="stat-number" data-target="120">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Şehir</span>
+            </div>
+            <div class="stat-item" id="stat-2">
+                <span class="stat-number" data-target="850">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Deneyim</span>
+            </div>
+            <div class="stat-item" id="stat-3">
+                <span class="stat-number" data-target="45">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Ülke</span>
+            </div>
+            <div class="stat-item" id="stat-4">
+                <span class="stat-number" data-target="100000">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Gezgin</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 8: İLHAM VEREN ALINTI
+    ========================================= -->
+    <section id="quote" class="section-quote">
+        <div class="quote-bg">
+            <img src="images/quote_background.jpg" alt="" loading="lazy">
+            <div class="quote-overlay"></div>
+        </div>
+        <div class="quote-content">
+            <blockquote class="quote-text" id="quote-text">
+                <span class="quote-word">Seyahat</span>
+                <span class="quote-word">ettiğiniz</span>
+                <span class="quote-word">yerler</span>
+                <span class="quote-word">sizi</span>
+                <span class="quote-word">değiştirmez.</span>
+                <br>
+                <span class="quote-word">Yaşadığınız</span>
+                <span class="quote-word"><em>deneyimler</em></span>
+                <span class="quote-word">değiştirir.</span>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SECTION 9: SON ÇAĞRI (CTA)
+    ========================================= -->
+    <section id="cta" class="section-cta">
+        <div class="cta-content">
+            <h2 class="cta-title" id="cta-title">
+                <span class="cta-title-line">Bir sonraki hikâyen</span>
+                <span class="cta-title-line">seni <em>bekliyor.</em></span>
+            </h2>
+            <div class="cta-search" id="cta-search">
+                <div class="cta-search-inner">
+                    <svg class="cta-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <input type="text" placeholder="Bir şehir, rota veya deneyim ara..." id="cta-search-input"
+                        class="cta-search-input" autocomplete="off">
+                </div>
+                <div id="cta-search-results" class="cta-search-results"></div>
+            </div>
+            <button class="cta-button" id="cta-explore-btn">
+                <span>Şimdi Keşfet</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="cta-particles" id="cta-particles"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">EXPLORE</h3>
+                    <p class="footer-tagline">Keşfetmenin yeni yolu.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>Keşfet</h4>
+                        <a href="#routes">Rotalar</a>
+                        <a href="#cities">Şehirler</a>
+                        <a href="#experiences">Deneyimler</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Hakkımızda</h4>
+                        <a href="#" class="footer-info-link" data-type="story">Hikâyemiz</a>
+                        <a href="#guides">Rehberler</a>
+                        <a href="#" class="footer-info-link" data-type="blog">Blog</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>İletişim</h4>
+                        <a href="#" class="chat-trigger-link">Destek</a>
+                        <a href="#" class="chat-trigger-link">Bize Ulaşın</a>
+                        <a href="#" class="chat-trigger-link">SSS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 EXPLORE. Tüm hakları saklıdır.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         ROUTE DETAIL MODAL
+    ========================================= -->
+    <div class="route-modal" id="route-modal">
+        <div class="route-modal-overlay" id="route-modal-overlay"></div>
+        <div class="route-modal-container" data-lenis-prevent>
+            <!-- Close Button -->
+            <button class="route-modal-close" id="route-modal-close" aria-label="Kapat">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Modal Header with Hero Image -->
+            <div class="route-modal-hero" id="route-modal-hero">
+                <img src="" alt="" id="route-modal-hero-img">
+                <div class="route-modal-hero-overlay"></div>
+                <div class="route-modal-hero-content">
+                    <span class="route-modal-label" id="route-modal-season"></span>
+                    <h2 class="route-modal-title" id="route-modal-title"></h2>
+                    <div class="route-modal-meta" id="route-modal-meta"></div>
+                </div>
+            </div>
+
+            <!-- Modal Body — Daily Itinerary -->
+            <div class="route-modal-body">
+                <div class="route-modal-intro">
+                    <p id="route-modal-intro-text"></p>
+                </div>
+
+                <h3 class="route-modal-schedule-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                    <span>Gün Programı</span>
+                </h3>
+
+                <div class="route-modal-timeline" id="route-modal-timeline">
+                    <!-- Sabah -->
+                    <div class="modal-time-block" data-period="sabah">
+                        <div class="modal-time-indicator">
+                            <div class="modal-time-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path
+                                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                                </svg>
+                            </div>
+                            <span class="modal-time-label">Sabah</span>
+                            <span class="modal-time-hours">07:00 — 12:00</span>
+                            <div class="modal-time-line"></div>
+                        </div>
+                        <div class="modal-time-content">
+                            <div class="modal-activities" id="modal-morning-activities">
+                                <!-- Filled by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Öğle -->
+                    <div class="modal-time-block" data-period="ogle">
+                        <div class="modal-time-indicator">
+                            <div class="modal-time-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="5" />
+                                    <path
+                                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                </svg>
+                            </div>
+                            <span class="modal-time-label">Öğle</span>
+                            <span class="modal-time-hours">12:00 — 17:00</span>
+                            <div class="modal-time-line"></div>
+                        </div>
+                        <div class="modal-time-content">
+                            <div class="modal-activities" id="modal-noon-activities">
+                                <!-- Filled by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Akşam -->
+                    <div class="modal-time-block" data-period="aksam">
+                        <div class="modal-time-indicator">
+                            <div class="modal-time-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                                </svg>
+                            </div>
+                            <span class="modal-time-label">Akşam</span>
+                            <span class="modal-time-hours">17:00 — 23:00</span>
+                            <div class="modal-time-line"></div>
+                        </div>
+                        <div class="modal-time-content">
+                            <div class="modal-activities" id="modal-evening-activities">
+                                <!-- Filled by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="route-modal-tips" id="route-modal-tips">
+                    <h4>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1h-6a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z" />
+                            <path d="M9 21h6M10 17v4M14 17v4" />
+                        </svg>
+                        İpuçları
+                    </h4>
+                    <ul id="route-modal-tips-list">
+                        <!-- Filled by JS -->
+                    </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="route-modal-cta">
+                    <a class="route-modal-book-btn" id="route-modal-book-btn" href="https://www.booking.com"
+                        target="_blank" rel="noopener noreferrer">
+                        <span>Bu Rotayı Planla</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         CITY DETAIL SIDE PANEL
+    ========================================= -->
+    <div class="city-side-panel" id="city-side-panel">
+        <div class="city-side-panel-overlay" id="city-side-panel-overlay"></div>
+        <div class="city-side-panel-container" data-lenis-prevent>
+            <!-- Header -->
+            <div class="city-side-panel-header">
+                <button class="city-side-panel-close" id="city-side-panel-close" aria-label="Kapat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="city-side-panel-header-title">
+                    <span class="city-side-panel-country" id="city-side-panel-country"></span>
+                    <h2 class="city-side-panel-title" id="city-side-panel-title"></h2>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="city-side-panel-hero">
+                <img src="" alt="" id="city-side-panel-hero-img">
+                <div class="city-side-panel-hero-overlay"></div>
+            </div>
+
+            <!-- Body Content -->
+            <div class="city-side-panel-body">
+                <div class="city-side-panel-intro">
+                    <p id="city-side-panel-intro-text"></p>
+                </div>
+
+                <!-- Section 1: Görülmesi Gereken Yerler -->
+                <div class="city-side-panel-section">
+                    <h3 class="city-side-panel-section-title">
+                        <span style="font-size: 1.3rem; margin-right: 0.5rem;">🏛️</span>
+                        <span>Görülmesi Gereken Yerler</span>
+                    </h3>
+                    <div class="city-side-panel-list" id="city-side-panel-see-list">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Section 2: Yenmesi Gereken Lezzetler -->
+                <div class="city-side-panel-section">
+                    <h3 class="city-side-panel-section-title">
+                        <span style="font-size: 1.3rem; margin-right: 0.5rem;">🍽️</span>
+                        <span>Yenmesi Gereken Lezzetler</span>
+                    </h3>
+                    <div class="city-side-panel-list" id="city-side-panel-eat-list">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         EXPERIENCE DETAIL SIDE PANEL
+    ========================================= -->
+    <div class="experience-side-panel" id="experience-side-panel">
+        <div class="experience-side-panel-overlay" id="experience-side-panel-overlay"></div>
+        <div class="experience-side-panel-container" data-lenis-prevent>
+            <!-- Header -->
+            <div class="experience-side-panel-header">
+                <button class="experience-side-panel-close" id="experience-side-panel-close" aria-label="Kapat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="experience-side-panel-header-title">
+                    <span class="experience-side-panel-category" id="experience-side-panel-category"></span>
+                    <h2 class="experience-side-panel-title" id="experience-side-panel-title"></h2>
+                </div>
+            </div>
+
+            <!-- Dynamic Hero Photo Area -->
+            <div class="experience-side-panel-hero" id="experience-side-panel-hero">
+                <img src="" alt="" id="experience-side-panel-hero-img">
+                <div class="experience-side-panel-hero-overlay"></div>
+            </div>
+
+            <!-- Body Content -->
+            <div class="experience-side-panel-body">
+                <!-- Description -->
+                <div class="experience-side-panel-intro">
+                    <p id="experience-side-panel-intro-text"></p>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="experience-side-panel-info-grid">
+                    <div class="experience-info-card">
+                        <div class="experience-info-icon" style="color: #A8C08F;">📍</div>
+                        <div class="experience-info-content">
+                            <h4>En İyi Rotalar / Konumlar</h4>
+                            <p id="experience-side-panel-location"></p>
+                        </div>
+                    </div>
+
+                    <div class="experience-info-card">
+                        <div class="experience-info-icon" style="color: #D68A53;">📅</div>
+                        <div class="experience-info-content">
+                            <h4>En İyi Zaman / Mevsim</h4>
+                            <p id="experience-side-panel-season"></p>
+                        </div>
+                    </div>
+
+                    <div class="experience-info-card">
+                        <div class="experience-info-icon" style="color: #A8C08F;">⚡</div>
+                        <div class="experience-info-content">
+                            <h4>Zorluk Derecesi</h4>
+                            <p id="experience-side-panel-difficulty"></p>
+                        </div>
+                    </div>
+
+                    <div class="experience-info-card">
+                        <div class="experience-info-icon" style="color: #D68A53;">💡</div>
+                        <div class="experience-info-content">
+                            <h4>Tavsiyeler & Ekipman</h4>
+                            <p id="experience-side-panel-tips"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Button -->
+                <div class="experience-side-panel-cta">
+                    <button class="experience-side-panel-plan-btn" id="experience-side-panel-plan-btn">
+                        <span>Bu Deneyimi Planla</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         TRAVEL CHATBOT WIDGET
+    ========================================= -->
+    <div class="chat-widget" id="chat-widget">
+        <!-- Chat Bubble Trigger -->
+        <button class="chat-bubble" id="chat-bubble" aria-label="Seyahat Asistanı">
+            <svg class="icon-chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" style="display: none;">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span class="chat-notification-badge" id="chat-badge">1</span>
+        </button>
+
+        <!-- Chat Window Panel -->
+        <div class="chat-window glass" id="chat-window">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                        </svg>
+                    </div>
+                    <div class="chat-status-details">
+                        <h4>EXPLORE Asistan</h4>
+                        <span class="chat-status-indicator">
+                            <span class="status-dot"></span>
+                            7/24 Çevrimiçi Rehber
+                        </span>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chat-close-btn" aria-label="Kapat">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="chat-messages" id="chat-messages" data-lenis-prevent>
+                <!-- Welcome Message from Bot -->
+                <div class="chat-msg bot-msg">
+                    <div class="chat-msg-avatar">🧭</div>
+                    <div class="chat-msg-text">
+                        Merhaba! Ben EXPLORE Seyahat Asistanı. 🧭<br><br>Size Türkiye'nin en büyüleyici rotaları, yerel
+                        deneyimler veya gezilecek şehirler hakkında bilgi vermek için 7/24 buradayım.<br><br>Merak
+                        ettiğiniz bir rota var mı? Aşağıdaki hızlı önerilere tıklayabilir veya bana doğrudan
+                        sorabilirsiniz.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggestion Chips -->
+            <div class="chat-suggestions-container">
+                <div class="chat-suggestions" id="chat-suggestions">
+                    <button class="suggestion-chip" data-keyword="kapadokya">🎈 Kapadokya Rotası</button>
+                    <button class="suggestion-chip" data-keyword="ege">🌊 Ege Kıyıları</button>
+                    <button class="suggestion-chip" data-keyword="karadeniz">🌲 Karadeniz Rüyası</button>
+                    <button class="suggestion-chip" data-keyword="istanbul">🕌 İstanbul Gezisi</button>
+                    <button class="suggestion-chip" data-keyword="aktiviteler">⛰️ Ne Yapabilirim?</button>
+                    <button class="suggestion-chip" data-keyword="rehber">🧭 Rehberler Kimler?</button>
+                </div>
+            </div>
+
+            <!-- Footer Input -->
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Bir seyahat sorusu yazın..." autocomplete="off">
+                <button class="chat-send-btn" id="chat-send-btn" aria-label="Gönder">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ========================================
+         TAG INFO PANEL (Yurtiçi / Yurtdışı)
+    ========================================= -->
+    <div class="tag-info-panel" id="tag-info-panel">
+        <div class="tag-info-panel-overlay" id="tag-info-panel-overlay"></div>
+        <div class="tag-info-panel-container" data-lenis-prevent>
+            <!-- Header -->
+            <div class="tag-info-panel-header">
+                <button class="tag-info-panel-close" id="tag-info-panel-close" aria-label="Kapat">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="tag-info-panel-header-title">
+                    <span class="tag-info-panel-badge" id="tag-info-panel-badge"></span>
+                    <h2 class="tag-info-panel-title" id="tag-info-panel-title"></h2>
+                </div>
+            </div>
+
+            <!-- Decorative Hero Banner -->
+            <div class="tag-info-panel-hero" id="tag-info-panel-hero">
+                <div class="tag-info-panel-hero-pattern"></div>
+                <div class="tag-info-panel-hero-content">
+                    <p class="tag-info-panel-hero-subtitle" id="tag-info-panel-hero-subtitle"></p>
+                </div>
+            </div>
+
+            <!-- Body Content -->
+            <div class="tag-info-panel-body">
+                <!-- Description -->
+                <div class="tag-info-panel-intro">
+                    <p id="tag-info-panel-description"></p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="tag-info-panel-stats" id="tag-info-panel-stats">
+                    <!-- Filled by JS -->
+                </div>
+
+                <!-- Highlights -->
+                <div class="tag-info-panel-section">
+                    <h3 class="tag-info-panel-section-title">
+                        <span style="font-size: 1.2rem; margin-right: 0.5rem;">✨</span>
+                        <span>Öne Çıkanlar</span>
+                    </h3>
+                    <div class="tag-info-panel-highlights" id="tag-info-panel-highlights">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Recommended Destinations -->
+                <div class="tag-info-panel-section">
+                    <h3 class="tag-info-panel-section-title">
+                        <span style="font-size: 1.2rem; margin-right: 0.5rem;">📍</span>
+                        <span>Önerilen Destinasyonlar</span>
+                    </h3>
+                    <div class="tag-info-panel-destinations" id="tag-info-panel-destinations">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="tag-info-panel-section">
+                    <h3 class="tag-info-panel-section-title">
+                        <span style="font-size: 1.2rem; margin-right: 0.5rem;">💡</span>
+                        <span>İpuçları</span>
+                    </h3>
+                    <div class="tag-info-panel-tips" id="tag-info-panel-tips">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="tag-info-panel-cta">
+                    <button class="tag-info-panel-explore-btn" id="tag-info-panel-explore-btn">
+                        <span>Rotaları Keşfet</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================================
+         INFO MODAL (Footer Links)
+    ========================================= -->
+    <div class="route-modal" id="info-modal"
+        style="z-index: 10000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; align-items: center; justify-content: center;">
+        <div class="route-modal-overlay" id="info-modal-overlay"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8);"></div>
+        <div class="route-modal-container info-modal-content"
+            style="position: relative; background: var(--color-dark); max-width: 600px; width: 90%; border-radius: var(--radius-lg); overflow: hidden; z-index: 2;">
+            <button class="route-modal-close" id="info-modal-close" aria-label="Kapat"
+                style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">✕</button>
+            <div class="route-modal-body" style="padding: 4rem 3rem;">
+                <h2 id="info-modal-title"
+                    style="font-family: var(--font-display); font-size: 2.5rem; color: var(--color-accent); margin-bottom: 2rem;">
+                    Başlık</h2>
+                <div id="info-modal-text" style="color: var(--color-text-dim); line-height: 1.8; font-size: 1.1rem;">
+                    İçerik...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tagData.js?v=1.0"></script>
+    <script src="script.js?v=3.4"></script>
+</body>
+
+</html>
