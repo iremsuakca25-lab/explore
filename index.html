@@ -54,13 +54,20 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">EXPLORE</a>
             <div class="nav-links">
-                <a href="#routes" class="nav-link">Rotalar</a>
-                <a href="#cities" class="nav-link">Şehirler</a>
-                <a href="#experiences" class="nav-link">Deneyimler</a>
-                <a href="#stories" class="nav-link">Hikâyeler</a>
-                <a href="#guides" class="nav-link">Rehberler</a>
+                <a href="#routes" class="nav-link" data-i18n="nav_routes">Rotalar</a>
+                <a href="#cities" class="nav-link" data-i18n="nav_cities">Şehirler</a>
+                <a href="#experiences" class="nav-link" data-i18n="nav_experiences">Deneyimler</a>
+                <a href="#stories" class="nav-link" data-i18n="nav_stories">Hikâyeler</a>
+                <a href="#guides" class="nav-link" data-i18n="nav_guides">Rehberler</a>
             </div>
-            <button class="nav-cta" id="nav-cta-btn">Keşfet</button>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <span style="color: rgba(255,255,255,0.3);">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-cta" id="nav-cta-btn" data-i18n="nav_discover">Keşfet</button>
+            </div>
             <button class="hamburger" id="hamburger-btn" aria-label="Menü aç/kapat">
                 <span></span>
                 <span></span>
@@ -72,12 +79,17 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-inner">
-            <a href="#routes" class="mobile-link">Rotalar</a>
-            <a href="#cities" class="mobile-link">Şehirler</a>
-            <a href="#experiences" class="mobile-link">Deneyimler</a>
-            <a href="#stories" class="mobile-link">Hikâyeler</a>
-            <a href="#guides" class="mobile-link">Rehberler</a>
-            <a href="#cta" class="mobile-link mobile-cta-link">Keşfetmeye Başla →</a>
+            <a href="#routes" class="mobile-link" data-i18n="nav_routes">Rotalar</a>
+            <a href="#cities" class="mobile-link" data-i18n="nav_cities">Şehirler</a>
+            <a href="#experiences" class="mobile-link" data-i18n="nav_experiences">Deneyimler</a>
+            <a href="#stories" class="mobile-link" data-i18n="nav_stories">Hikâyeler</a>
+            <a href="#guides" class="mobile-link" data-i18n="nav_guides">Rehberler</a>
+            <div class="mobile-lang-switcher" style="margin: 1rem 0; display: flex; gap: 1rem; justify-content: center;">
+                <button class="lang-btn active" data-lang="tr" style="background: none; border: none; color: #fff; font-size: 1.2rem; font-family: var(--font-body);">TR</button>
+                <span style="color: rgba(255,255,255,0.3); font-size: 1.2rem;">|</span>
+                <button class="lang-btn" data-lang="en" style="background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.2rem; font-family: var(--font-body);">EN</button>
+            </div>
+            <a href="#cta" class="mobile-link mobile-cta-link" data-i18n="nav_discover_mobile">Keşfetmeye Başla →</a>
         </div>
     </div>
 
@@ -92,13 +104,13 @@
 
         <!-- Slogan -->
         <div class="hero-slogan">
-            <span class="hero-slogan-line">ZAMANSIZ</span>
-            <span class="hero-slogan-line hero-slogan-bold">YOLCULUKLAR</span>
+            <span class="hero-slogan-line" data-i18n="hero_slogan_1">ZAMANSIZ</span>
+            <span class="hero-slogan-line hero-slogan-bold" data-i18n="hero_slogan_2">YOLCULUKLAR</span>
         </div>
 
         <div class="hero-bottom">
             <a href="#routes" class="hero-cta" id="hero-cta-btn">
-                <span>Keşfetmeye Başla</span>
+                <span data-i18n="hero_start_explore">Keşfetmeye Başla</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -111,15 +123,15 @@
     ========================================= -->
     <section id="routes" class="section-routes">
         <div class="section-header">
-            <span class="section-label">ROTALAR</span>
+            <span class="section-label" data-i18n="section_routes">ROTALAR</span>
             <div class="section-header-top">
                 <h2 class="section-title routes-title">
-                    <span class="title-line">Dünyanın her köşesinde</span>
-                    <span class="title-line">keşfedilecek bir <em>hikâye</em> var.</span>
+                    <span class="title-line" data-i18n="routes_title_1">Dünyanın her köşesinde</span>
+                    <span class="title-line" data-i18n="routes_title_2">keşfedilecek bir <em>hikâye</em> var.</span>
                 </h2>
                 <div class="category-tabs" id="routes-tabs">
-                    <button class="tab-btn active" data-target="routes-domestic">Yurtiçi</button>
-                    <button class="tab-btn" data-target="routes-international">Yurtdışı</button>
+                    <button class="tab-btn active" data-target="routes-domestic" data-i18n="tab_domestic">Yurtiçi</button>
+                    <button class="tab-btn" data-target="routes-international" data-i18n="tab_international">Yurtdışı</button>
                 </div>
             </div>
         </div>
@@ -143,19 +155,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>5 Gün</span>
+                                <span data-i18n="route_days_5">5 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Orta</span>
+                                <span data-i18n="route_medium">Orta</span>
                             </div>
                         </div>
-                        <p class="route-desc">Peri bacalarından balon turlarına, yeraltı şehirlerinden antik kiliselere
+                        <p class="route-desc" data-i18n="route_capadocia_desc">Peri bacalarından balon turlarına, yeraltı şehirlerinden antik kiliselere
                             uzanan büyülü bir rota.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -178,19 +190,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>7 Gün</span>
+                                <span data-i18n="route_days_7">7 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Kolay</span>
+                                <span data-i18n="route_easy">Kolay</span>
                             </div>
                         </div>
-                        <p class="route-desc">Turkuaz koylardan antik kentlere, zeytinliklerden butik otellere uzanan
+                        <p class="route-desc" data-i18n="route_aegean_desc">Turkuaz koylardan antik kentlere, zeytinliklerden butik otellere uzanan
                             huzurlu bir Akdeniz yolculuğu.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -213,19 +225,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>6 Gün</span>
+                                <span data-i18n="route_days_6">6 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Zor</span>
+                                <span data-i18n="route_hard">Zor</span>
                             </div>
                         </div>
-                        <p class="route-desc">Sisli yaylalar, yeşil vadiler, ahşap yayla evleri ve eşsiz doğa
+                        <p class="route-desc" data-i18n="route_blacksea_desc">Sisli yaylalar, yeşil vadiler, ahşap yayla evleri ve eşsiz doğa
                             manzaraları.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -248,19 +260,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>4 Gün</span>
+                                <span data-i18n="route_days_4">4 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Kolay</span>
+                                <span data-i18n="route_easy">Kolay</span>
                             </div>
                         </div>
-                        <p class="route-desc">Bizans'tan Osmanlı'ya, tarihi yarımadadan Boğaz kıyılarına uzanan kültürel
+                        <p class="route-desc" data-i18n="route_istanbul_desc">Bizans'tan Osmanlı'ya, tarihi yarımadadan Boğaz kıyılarına uzanan kültürel
                             bir yolculuk.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -283,19 +295,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>3 Gün</span>
+                                <span data-i18n="route_days_3">3 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Kolay</span>
+                                <span data-i18n="route_easy">Kolay</span>
                             </div>
                         </div>
-                        <p class="route-desc">Karlarla kaplı Anadolu manzaraları eşliğinde unutulmaz bir tren yolculuğu
+                        <p class="route-desc" data-i18n="route_kars_desc">Karlarla kaplı Anadolu manzaraları eşliğinde unutulmaz bir tren yolculuğu
                             ve Ani Harabeleri.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -321,19 +333,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>6 Gün</span>
+                                <span data-i18n="route_days_6">6 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Kolay</span>
+                                <span data-i18n="route_easy">Kolay</span>
                             </div>
                         </div>
-                        <p class="route-desc">Antik tapınaklar, bambu ormanları ve geleneksel çay evleriyle huzur dolu
+                        <p class="route-desc" data-i18n="route_kyoto_desc">Antik tapınaklar, bambu ormanları ve geleneksel çay evleriyle huzur dolu
                             bir Japonya keşfi.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -356,19 +368,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>4 Gün</span>
+                                <span data-i18n="route_days_4">4 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Orta</span>
+                                <span data-i18n="route_medium">Orta</span>
                             </div>
                         </div>
-                        <p class="route-desc">Louvre'dan Montmartre sokaklarına, Seine nehri kıyısında romantik ve
+                        <p class="route-desc" data-i18n="route_paris_desc">Louvre'dan Montmartre sokaklarına, Seine nehri kıyısında romantik ve
                             sanatsal bir yolculuk.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -391,19 +403,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>5 Gün</span>
+                                <span data-i18n="route_days_5">5 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Kolay</span>
+                                <span data-i18n="route_easy">Kolay</span>
                             </div>
                         </div>
-                        <p class="route-desc">Kolezyum'dan Trevi Çeşmesi'ne uzanan, tarih ve eşsiz İtalyan lezzetleriyle
+                        <p class="route-desc" data-i18n="route_rome_desc">Kolezyum'dan Trevi Çeşmesi'ne uzanan, tarih ve eşsiz İtalyan lezzetleriyle
                             dolu bir yolculuk.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -426,19 +438,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>6 Gün</span>
+                                <span data-i18n="route_days_6">6 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Zor</span>
+                                <span data-i18n="route_hard">Zor</span>
                             </div>
                         </div>
-                        <p class="route-desc">Buzul gölleri, ahşap dağ evleri ve muhteşem doğa yürüyüşleriyle kusursuz
+                        <p class="route-desc" data-i18n="route_swiss_desc">Buzul gölleri, ahşap dağ evleri ve muhteşem doğa yürüyüşleriyle kusursuz
                             bir dinlenme.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -461,19 +473,19 @@
                                     <circle cx="12" cy="12" r="10" />
                                     <path d="M12 6v6l4 2" />
                                 </svg>
-                                <span>5 Gün</span>
+                                <span data-i18n="route_days_5">5 Gün</span>
                             </div>
                             <div class="route-meta-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                                 </svg>
-                                <span>Orta</span>
+                                <span data-i18n="route_medium">Orta</span>
                             </div>
                         </div>
-                        <p class="route-desc">Çöllerin ortasında yükselen devasa piramitler ve Nil Nehri boyunca antik
+                        <p class="route-desc" data-i18n="route_egypt_desc">Çöllerin ortasında yükselen devasa piramitler ve Nil Nehri boyunca antik
                             firavunların izleri.</p>
-                        <button class="route-explore-btn">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="route-explore-btn" data-i18n="btn_explore_route">Rotayı Keşfet <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></button>
@@ -488,15 +500,15 @@
     ========================================= -->
     <section id="cities" class="section-cities">
         <div class="section-header">
-            <span class="section-label">ŞEHİRLER</span>
+            <span class="section-label" data-i18n="section_cities">ŞEHİRLER</span>
             <div class="section-header-top">
                 <h2 class="section-title cities-title">
-                    <span class="title-line">Şehirler sadece bir yer değil,</span>
-                    <span class="title-line">bir <em>deneyimdir.</em></span>
+                    <span class="title-line" data-i18n="cities_title_1">Şehirler sadece bir yer değil,</span>
+                    <span class="title-line" data-i18n="cities_title_2">bir <em>deneyimdir.</em></span>
                 </h2>
                 <div class="category-tabs" id="cities-tabs">
-                    <button class="tab-btn active" data-target="cities-domestic">Yurtiçi</button>
-                    <button class="tab-btn" data-target="cities-international">Yurtdışı</button>
+                    <button class="tab-btn active" data-target="cities-domestic" data-i18n="tab_domestic">Yurtiçi</button>
+                    <button class="tab-btn" data-target="cities-international" data-i18n="tab_international">Yurtdışı</button>
                 </div>
             </div>
         </div>
@@ -507,12 +519,12 @@
                 <img src="images/istanbul_panorama.jpg" alt="İstanbul" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">İstanbul</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Tarih</span>
-                        <span class="city-tag">Gastronomi</span>
-                        <span class="city-tag">Kültür</span>
+                        <span class="city-tag" data-i18n="tag_history">Tarih</span>
+                        <span class="city-tag" data-i18n="tag_gastro">Gastronomi</span>
+                        <span class="city-tag" data-i18n="tag_culture">Kültür</span>
                     </div>
                 </div>
             </div>
@@ -521,11 +533,11 @@
                 <img src="images/cappadocia.jpg" alt="Kapadokya" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">Kapadokya</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Doğa</span>
-                        <span class="city-tag">Tarih</span>
+                        <span class="city-tag" data-i18n="tag_nature">Doğa</span>
+                        <span class="city-tag" data-i18n="tag_history">Tarih</span>
                     </div>
                 </div>
             </div>
@@ -534,11 +546,11 @@
                 <img src="images/aegean_coast.jpg" alt="İzmir" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">İzmir</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Deniz</span>
-                        <span class="city-tag">Kültür</span>
+                        <span class="city-tag" data-i18n="tag_sea">Deniz</span>
+                        <span class="city-tag" data-i18n="tag_culture">Kültür</span>
                     </div>
                 </div>
             </div>
@@ -547,11 +559,11 @@
                 <img src="images/blacksea_highlands.jpg" alt="Rize" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">Rize</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Doğa</span>
-                        <span class="city-tag">Macera</span>
+                        <span class="city-tag" data-i18n="tag_nature">Doğa</span>
+                        <span class="city-tag" data-i18n="tag_adventure">Macera</span>
                     </div>
                 </div>
             </div>
@@ -560,11 +572,11 @@
                 <img src="images/parasut.jpg" alt="Fethiye" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">Fethiye</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Macera</span>
-                        <span class="city-tag">Deniz</span>
+                        <span class="city-tag" data-i18n="tag_adventure">Macera</span>
+                        <span class="city-tag" data-i18n="tag_sea">Deniz</span>
                     </div>
                 </div>
             </div>
@@ -573,11 +585,11 @@
                 <img src="images/kars.jpg" alt="Kars" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Türkiye</span>
+                    <span class="city-country" data-i18n="country_tr">Türkiye</span>
                     <h3 class="city-name">Kars</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Kış</span>
-                        <span class="city-tag">Tarih</span>
+                        <span class="city-tag" data-i18n="tag_winter">Kış</span>
+                        <span class="city-tag" data-i18n="tag_history">Tarih</span>
                     </div>
                 </div>
             </div>
@@ -589,12 +601,12 @@
                 <img src="images/paris_cityscape.jpg" alt="Paris" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Fransa</span>
+                    <span class="city-country" data-i18n="country_fr">Fransa</span>
                     <h3 class="city-name">Paris</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Sanat</span>
-                        <span class="city-tag">Romantizm</span>
-                        <span class="city-tag">Gastronomi</span>
+                        <span class="city-tag" data-i18n="tag_art">Sanat</span>
+                        <span class="city-tag" data-i18n="tag_romance">Romantizm</span>
+                        <span class="city-tag" data-i18n="tag_gastro">Gastronomi</span>
                     </div>
                 </div>
             </div>
@@ -603,11 +615,11 @@
                 <img src="images/kyoto_temple.jpg" alt="Kyoto" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Japonya</span>
+                    <span class="city-country" data-i18n="country_jp">Japonya</span>
                     <h3 class="city-name">Kyoto</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Zen</span>
-                        <span class="city-tag">Doğa</span>
+                        <span class="city-tag" data-i18n="tag_zen">Zen</span>
+                        <span class="city-tag" data-i18n="tag_nature">Doğa</span>
                     </div>
                 </div>
             </div>
@@ -616,11 +628,11 @@
                 <img src="images/rome.jpg" alt="Roma" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">İtalya</span>
+                    <span class="city-country" data-i18n="country_it">İtalya</span>
                     <h3 class="city-name">Roma</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Tarih</span>
-                        <span class="city-tag">Kültür</span>
+                        <span class="city-tag" data-i18n="tag_history">Tarih</span>
+                        <span class="city-tag" data-i18n="tag_culture">Kültür</span>
                     </div>
                 </div>
             </div>
@@ -629,11 +641,11 @@
                 <img src="images/reykjavik_nature.jpg" alt="Reykjavik" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">İzlanda</span>
+                    <span class="city-country" data-i18n="country_is">İzlanda</span>
                     <h3 class="city-name">Reykjavik</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Doğa</span>
-                        <span class="city-tag">Macera</span>
+                        <span class="city-tag" data-i18n="tag_nature">Doğa</span>
+                        <span class="city-tag" data-i18n="tag_adventure">Macera</span>
                     </div>
                 </div>
             </div>
@@ -642,11 +654,11 @@
                 <img src="images/santorini_view.jpg" alt="Santorini" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Yunanistan</span>
+                    <span class="city-country" data-i18n="country_gr">Yunanistan</span>
                     <h3 class="city-name">Santorini</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Romantizm</span>
-                        <span class="city-tag">Deniz</span>
+                        <span class="city-tag" data-i18n="tag_romance">Romantizm</span>
+                        <span class="city-tag" data-i18n="tag_sea">Deniz</span>
                     </div>
                 </div>
             </div>
@@ -655,11 +667,11 @@
                 <img src="images/marrakech_market.jpg" alt="Marrakech" loading="lazy">
                 <div class="city-card-overlay"></div>
                 <div class="city-card-content">
-                    <span class="city-country">Fas</span>
+                    <span class="city-country" data-i18n="country_ma">Fas</span>
                     <h3 class="city-name">Marrakech</h3>
                     <div class="city-experiences">
-                        <span class="city-tag">Kültür</span>
-                        <span class="city-tag">Baharat</span>
+                        <span class="city-tag" data-i18n="tag_culture">Kültür</span>
+                        <span class="city-tag" data-i18n="tag_spice">Baharat</span>
                     </div>
                 </div>
             </div>
@@ -671,15 +683,15 @@
     ========================================= -->
     <section id="experiences" class="section-experiences">
         <div class="section-header">
-            <span class="section-label">DENEYİMLER</span>
+            <span class="section-label" data-i18n="section_experiences">DENEYİMLER</span>
         </div>
 
         <div class="experiences-container">
             <div class="experience-item" id="exp-macera" data-color="#D68A53">
-                <h3 class="experience-word">MACERA</h3>
+                <h3 class="experience-word" data-i18n="exp_adv">MACERA</h3>
                 <div class="experience-content">
                     <div class="experience-inner">
-                        <p>Adrenalin dolu aktiviteler, keşfedilmemiş rotalar ve sınırlarını zorlayan deneyimler.</p>
+                        <p data-i18n="exp_adv_desc">Adrenalin dolu aktiviteler, keşfedilmemiş rotalar ve sınırlarını zorlayan deneyimler.</p>
                         <div class="experience-subcats">
                             <div class="exp-sub">
                                 <h4>Yurtiçi</h4>
@@ -702,10 +714,10 @@
             </div>
 
             <div class="experience-item" id="exp-kultur" data-color="#A8C08F">
-                <h3 class="experience-word">KÜLTÜR</h3>
+                <h3 class="experience-word" data-i18n="exp_cult">KÜLTÜR</h3>
                 <div class="experience-content">
                     <div class="experience-inner">
-                        <p>Tarihi yapılar, müzeler, yerel gelenekler ve medeniyetlerin izinde bir yolculuk.</p>
+                        <p data-i18n="exp_cult_desc">Tarihi yapılar, müzeler, yerel gelenekler ve medeniyetlerin izinde bir yolculuk.</p>
                         <div class="experience-subcats">
                             <div class="exp-sub">
                                 <h4>Yurtiçi</h4>
@@ -729,10 +741,10 @@
             </div>
 
             <div class="experience-item" id="exp-lezzet" data-color="#D68A53">
-                <h3 class="experience-word">LEZZET</h3>
+                <h3 class="experience-word" data-i18n="exp_taste">LEZZET</h3>
                 <div class="experience-content">
                     <div class="experience-inner">
-                        <p>Yerel mutfaklar, sokak lezzetleri, şarap turları ve gastronomi deneyimleri.</p>
+                        <p data-i18n="exp_taste_desc">Yerel mutfaklar, sokak lezzetleri, şarap turları ve gastronomi deneyimleri.</p>
                         <div class="experience-subcats">
                             <div class="exp-sub">
                                 <h4>Yurtiçi</h4>
@@ -756,10 +768,10 @@
             </div>
 
             <div class="experience-item" id="exp-doga" data-color="#A8C08F">
-                <h3 class="experience-word">DOĞA</h3>
+                <h3 class="experience-word" data-i18n="exp_nature">DOĞA</h3>
                 <div class="experience-content">
                     <div class="experience-inner">
-                        <p>Ormanlar, dağlar, denizler ve doğanın en saf halini keşfedin.</p>
+                        <p data-i18n="exp_nature_desc">Ormanlar, dağlar, denizler ve doğanın en saf halini keşfedin.</p>
                         <div class="experience-subcats">
                             <div class="exp-sub">
                                 <h4>Yurtiçi</h4>
@@ -783,10 +795,10 @@
             </div>
 
             <div class="experience-item" id="exp-sanat" data-color="#D68A53">
-                <h3 class="experience-word">SANAT</h3>
+                <h3 class="experience-word" data-i18n="exp_art">SANAT</h3>
                 <div class="experience-content">
                     <div class="experience-inner">
-                        <p>Galeriler, sokak sanatı, performans ve yerel sanat atölyeleri.</p>
+                        <p data-i18n="exp_art_desc">Galeriler, sokak sanatı, performans ve yerel sanat atölyeleri.</p>
                         <div class="experience-subcats">
                             <div class="exp-sub">
                                 <h4>Yurtiçi</h4>
@@ -818,7 +830,7 @@
     ========================================= -->
     <section id="stories" class="section-stories">
         <div class="section-header">
-            <span class="section-label">HİKÂYELER</span>
+            <span class="section-label" data-i18n="section_stories">HİKÂYELER</span>
         </div>
 
         <div class="story-container">
@@ -830,7 +842,7 @@
             </div>
 
             <div class="story-content">
-                <h2 class="story-main-title">İstanbul'da <br><em>48 Saat</em></h2>
+                <h2 class="story-main-title"><span data-i18n="story_title_1">İstanbul'da</span> <br><em data-i18n="story_title_2">48 Saat</em></h2>
 
                 <div class="story-timeline">
                     <div class="story-chapter" id="story-morning" data-time="Sabah">
@@ -839,8 +851,8 @@
                             <span class="marker-line"></span>
                         </div>
                         <div class="story-chapter-content">
-                            <h4>Sabah</h4>
-                            <p>Sultanahmet'te güneşin ilk ışıklarıyla uyanın. Ayasofya'nın görkemli kubbesi altında
+                            <h4 data-i18n="story_morning">Sabah</h4>
+                            <p data-i18n="story_morning_desc">Sultanahmet'te güneşin ilk ışıklarıyla uyanın. Ayasofya'nın görkemli kubbesi altında
                                 tarihe dokunun, ardından simit ve çayla güne başlayın.</p>
                         </div>
                     </div>
@@ -851,8 +863,8 @@
                             <span class="marker-line"></span>
                         </div>
                         <div class="story-chapter-content">
-                            <h4>Öğle</h4>
-                            <p>Kapalıçarşı'nın labirentlerinde kaybolun. Rengarenk baharatlar, el yapımı seramikler ve
+                            <h4 data-i18n="story_noon">Öğle</h4>
+                            <p data-i18n="story_noon_desc">Kapalıçarşı'nın labirentlerinde kaybolun. Rengarenk baharatlar, el yapımı seramikler ve
                                 yüzyıllık zanaat geleneğiyle tanışın.</p>
                         </div>
                     </div>
@@ -863,8 +875,8 @@
                             <span class="marker-line"></span>
                         </div>
                         <div class="story-chapter-content">
-                            <h4>Akşam</h4>
-                            <p>Galata Kulesi'nden gün batımını izleyin. Boğaz'ın iki yakasını birleştiren ışıklar,
+                            <h4 data-i18n="story_evening">Akşam</h4>
+                            <p data-i18n="story_evening_desc">Galata Kulesi'nden gün batımını izleyin. Boğaz'ın iki yakasını birleştiren ışıklar,
                                 şehrin büyüsünü gözler önüne serer.</p>
                         </div>
                     </div>
@@ -875,8 +887,8 @@
                             <span class="marker-line"></span>
                         </div>
                         <div class="story-chapter-content">
-                            <h4>Gece</h4>
-                            <p>Kadıköy sokaklarında canlı müzik eşliğinde meyhane kültürünü deneyimleyin. Rakı ve meze
+                            <h4 data-i18n="story_night">Gece</h4>
+                            <p data-i18n="story_night_desc">Kadıköy sokaklarında canlı müzik eşliğinde meyhane kültürünü deneyimleyin. Rakı ve meze
                                 ile İstanbul gecelerinin tadını çıkarın.</p>
                         </div>
                     </div>
@@ -890,10 +902,10 @@
     ========================================= -->
     <section id="guides" class="section-guides">
         <div class="section-header">
-            <span class="section-label">REHBERLER</span>
+            <span class="section-label" data-i18n="section_guides">REHBERLER</span>
             <h2 class="section-title guides-title">
-                <span class="title-line">Yerel rehberlerle</span>
-                <span class="title-line">gerçek <em>keşiflere</em> çıkın.</span>
+                <span class="title-line" data-i18n="guides_title_1">Yerel rehberlerle</span>
+                <span class="title-line" data-i18n="guides_title_2">gerçek <em>keşiflere</em> çıkın.</span>
             </h2>
         </div>
 
@@ -907,16 +919,16 @@
                 </div>
                 <div class="guide-info">
                     <h4 class="guide-name">Ahmet Yılmaz</h4>
-                    <span class="guide-specialty">Tarih Rehberi</span>
-                    <p class="guide-bio">20 yıllık deneyimle İstanbul'un gizli tarihî noktalarını keşfettiren uzman
+                    <span class="guide-specialty" data-i18n="guide_history_spec">Tarih Rehberi</span>
+                    <p class="guide-bio" data-i18n="guide_history_bio">20 yıllık deneyimle İstanbul'un gizli tarihî noktalarını keşfettiren uzman
                         rehber.</p>
                 </div>
                 <div class="guide-hover-content">
                     <div class="guide-stats">
-                        <div><strong>150+</strong><span>Tur</span></div>
-                        <div><strong>4.9</strong><span>Puan</span></div>
+                        <div><strong>150+</strong><span data-i18n="guide_tour">Tur</span></div>
+                        <div><strong>4.9</strong><span data-i18n="guide_score">Puan</span></div>
                     </div>
-                    <a href="mailto:ahmet.yilmaz@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                    <a href="mailto:ahmet.yilmaz@explore.com" class="guide-contact-btn" data-i18n="guide_contact">İletişime Geç</a>
                 </div>
             </div>
 
@@ -929,16 +941,16 @@
                 </div>
                 <div class="guide-info">
                     <h4 class="guide-name">Elif Kaya</h4>
-                    <span class="guide-specialty">Gastronomi Uzmanı</span>
-                    <p class="guide-bio">Yerel lezzetlerin peşinde, sokak yemeklerinden haute cuisine'e kadar gastronomi
+                    <span class="guide-specialty" data-i18n="guide_gastro_spec">Gastronomi Uzmanı</span>
+                    <p class="guide-bio" data-i18n="guide_gastro_bio">Yerel lezzetlerin peşinde, sokak yemeklerinden haute cuisine'e kadar gastronomi
                         turları.</p>
                 </div>
                 <div class="guide-hover-content">
                     <div class="guide-stats">
-                        <div><strong>200+</strong><span>Tur</span></div>
-                        <div><strong>5.0</strong><span>Puan</span></div>
+                        <div><strong>200+</strong><span data-i18n="guide_tour">Tur</span></div>
+                        <div><strong>5.0</strong><span data-i18n="guide_score">Puan</span></div>
                     </div>
-                    <a href="mailto:elif.kaya@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                    <a href="mailto:elif.kaya@explore.com" class="guide-contact-btn" data-i18n="guide_contact">İletişime Geç</a>
                 </div>
             </div>
 
@@ -951,16 +963,16 @@
                 </div>
                 <div class="guide-info">
                     <h4 class="guide-name">Mert Özdemir</h4>
-                    <span class="guide-specialty">Fotoğraf Rehberi</span>
-                    <p class="guide-bio">En iyi kadrajları yakalayın. Fotoğraf odaklı turlarla görsel hikâyeler
+                    <span class="guide-specialty" data-i18n="guide_photo_spec">Fotoğraf Rehberi</span>
+                    <p class="guide-bio" data-i18n="guide_photo_bio">En iyi kadrajları yakalayın. Fotoğraf odaklı turlarla görsel hikâyeler
                         oluşturun.</p>
                 </div>
                 <div class="guide-hover-content">
                     <div class="guide-stats">
-                        <div><strong>120+</strong><span>Tur</span></div>
-                        <div><strong>4.8</strong><span>Puan</span></div>
+                        <div><strong>120+</strong><span data-i18n="guide_tour">Tur</span></div>
+                        <div><strong>4.8</strong><span data-i18n="guide_score">Puan</span></div>
                     </div>
-                    <a href="mailto:mert.ozdemir@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                    <a href="mailto:mert.ozdemir@explore.com" class="guide-contact-btn" data-i18n="guide_contact">İletişime Geç</a>
                 </div>
             </div>
 
@@ -973,15 +985,15 @@
                 </div>
                 <div class="guide-info">
                     <h4 class="guide-name">Zeynep Demir</h4>
-                    <span class="guide-specialty">Doğa Rehberi</span>
-                    <p class="guide-bio">Dağlardan denizlere, doğanın kalbinde rehberlik eden macera uzmanı.</p>
+                    <span class="guide-specialty" data-i18n="guide_nature_spec">Doğa Rehberi</span>
+                    <p class="guide-bio" data-i18n="guide_nature_bio">Dağlardan denizlere, doğanın kalbinde rehberlik eden macera uzmanı.</p>
                 </div>
                 <div class="guide-hover-content">
                     <div class="guide-stats">
-                        <div><strong>180+</strong><span>Tur</span></div>
-                        <div><strong>4.9</strong><span>Puan</span></div>
+                        <div><strong>180+</strong><span data-i18n="guide_tour">Tur</span></div>
+                        <div><strong>4.9</strong><span data-i18n="guide_score">Puan</span></div>
                     </div>
-                    <a href="mailto:zeynep.demir@explore.com" class="guide-contact-btn">İletişime Geç</a>
+                    <a href="mailto:zeynep.demir@explore.com" class="guide-contact-btn" data-i18n="guide_contact">İletişime Geç</a>
                 </div>
             </div>
         </div>
@@ -996,22 +1008,22 @@
             <div class="stat-item" id="stat-1">
                 <span class="stat-number" data-target="120">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">Şehir</span>
+                <span class="stat-label" data-i18n="stat_city">Şehir</span>
             </div>
             <div class="stat-item" id="stat-2">
                 <span class="stat-number" data-target="850">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">Deneyim</span>
+                <span class="stat-label" data-i18n="stat_exp">Deneyim</span>
             </div>
             <div class="stat-item" id="stat-3">
                 <span class="stat-number" data-target="45">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">Ülke</span>
+                <span class="stat-label" data-i18n="stat_country">Ülke</span>
             </div>
             <div class="stat-item" id="stat-4">
                 <span class="stat-number" data-target="100000">0</span>
                 <span class="stat-plus">+</span>
-                <span class="stat-label">Gezgin</span>
+                <span class="stat-label" data-i18n="stat_traveler">Gezgin</span>
             </div>
         </div>
     </section>
@@ -1026,15 +1038,15 @@
         </div>
         <div class="quote-content">
             <blockquote class="quote-text" id="quote-text">
-                <span class="quote-word">Seyahat</span>
-                <span class="quote-word">ettiğiniz</span>
-                <span class="quote-word">yerler</span>
-                <span class="quote-word">sizi</span>
-                <span class="quote-word">değiştirmez.</span>
+                <span class="quote-word" data-i18n="quote_1">Seyahat</span>
+                <span class="quote-word" data-i18n="quote_2">ettiğiniz</span>
+                <span class="quote-word" data-i18n="quote_3">yerler</span>
+                <span class="quote-word" data-i18n="quote_4">sizi</span>
+                <span class="quote-word" data-i18n="quote_5">değiştirmez.</span>
                 <br>
-                <span class="quote-word">Yaşadığınız</span>
-                <span class="quote-word"><em>deneyimler</em></span>
-                <span class="quote-word">değiştirir.</span>
+                <span class="quote-word" data-i18n="quote_6">Yaşadığınız</span>
+                <span class="quote-word" data-i18n="quote_7"><em>deneyimler</em></span>
+                <span class="quote-word" data-i18n="quote_8">değiştirir.</span>
             </blockquote>
         </div>
     </section>
@@ -1045,8 +1057,8 @@
     <section id="cta" class="section-cta">
         <div class="cta-content">
             <h2 class="cta-title" id="cta-title">
-                <span class="cta-title-line">Bir sonraki hikâyen</span>
-                <span class="cta-title-line">seni <em>bekliyor.</em></span>
+                <span class="cta-title-line" data-i18n="cta_title_1">Bir sonraki hikâyen</span>
+                <span class="cta-title-line" data-i18n="cta_title_2">seni <em>bekliyor.</em></span>
             </h2>
             <div class="cta-search" id="cta-search">
                 <div class="cta-search-inner">
@@ -1055,13 +1067,13 @@
                         <circle cx="11" cy="11" r="8" />
                         <path d="M21 21l-4.35-4.35" />
                     </svg>
-                    <input type="text" placeholder="Bir şehir, rota veya deneyim ara..." id="cta-search-input"
+                    <input type="text" placeholder="Bir şehir, rota veya deneyim ara..." data-i18n="cta_placeholder" id="cta-search-input"
                         class="cta-search-input" autocomplete="off">
                 </div>
                 <div id="cta-search-results" class="cta-search-results"></div>
             </div>
             <button class="cta-button" id="cta-explore-btn">
-                <span>Şimdi Keşfet</span>
+                <span data-i18n="cta_btn">Şimdi Keşfet</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -1077,31 +1089,31 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <h3 class="footer-logo">EXPLORE</h3>
-                    <p class="footer-tagline">Keşfetmenin yeni yolu.</p>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Keşfetmenin yeni yolu.</p>
                 </div>
                 <div class="footer-links-group">
                     <div class="footer-col">
-                        <h4>Keşfet</h4>
+                        <h4 data-i18n="footer_col_1">Keşfet</h4>
                         <a href="#routes">Rotalar</a>
                         <a href="#cities">Şehirler</a>
                         <a href="#experiences">Deneyimler</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Hakkımızda</h4>
-                        <a href="#" class="footer-info-link" data-type="story">Hikâyemiz</a>
+                        <h4 data-i18n="footer_col_2">Hakkımızda</h4>
+                        <a href="#" class="footer-info-link" data-type="story" data-i18n="footer_story">Hikâyemiz</a>
                         <a href="#guides">Rehberler</a>
-                        <a href="#" class="footer-info-link" data-type="blog">Blog</a>
+                        <a href="#" class="footer-info-link" data-type="blog" data-i18n="footer_blog">Blog</a>
                     </div>
                     <div class="footer-col">
-                        <h4>İletişim</h4>
-                        <a href="#" class="chat-trigger-link">Destek</a>
-                        <a href="#" class="chat-trigger-link">Bize Ulaşın</a>
-                        <a href="#" class="chat-trigger-link">SSS</a>
+                        <h4 data-i18n="footer_col_3">İletişim</h4>
+                        <a href="#" class="chat-trigger-link" data-i18n="footer_support">Destek</a>
+                        <a href="#" class="chat-trigger-link" data-i18n="footer_contact">Bize Ulaşın</a>
+                        <a href="#" class="chat-trigger-link" data-i18n="footer_faq">SSS</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 EXPLORE. Tüm hakları saklıdır.</span>
+                <span data-i18n="footer_copyright">© 2026 EXPLORE. Tüm hakları saklıdır.</span>
             </div>
         </div>
     </footer>
@@ -1573,6 +1585,7 @@
         </div>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="tagData.js?v=1.0"></script>
     <script src="script.js?v=3.4"></script>
 </body>

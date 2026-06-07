@@ -318,6 +318,31 @@ em {
     color: var(--color-primary);
 }
 
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: color var(--transition-fast);
+}
+
+.lang-btn:hover {
+    color: var(--color-text);
+}
+
+.lang-btn.active {
+    color: var(--color-accent);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
