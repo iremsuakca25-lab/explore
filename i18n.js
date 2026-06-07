@@ -491,7 +491,7 @@ const translations = {
     }
 };
 
-let currentLang = localStorage.getItem('explore_lang') || 'tr';
+let currentLang = 'tr'; // Her zaman Türkçe ile başla
 
 function setLanguage(lang) {
     currentLang = lang;
