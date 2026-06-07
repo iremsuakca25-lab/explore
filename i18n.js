@@ -218,6 +218,31 @@ const translations = {
         "tag_flor_ren": "Floransa Rönesans Turu",
         "tag_vatican_mus": "Vatikan Müzeleri",
     },
+
+        // Chatbot
+        "chat_title": "EXPLORE Asistan",
+        "chat_status": "7/24 Çevrimiçi Rehber",
+        "chat_welcome": "Merhaba! Ben EXPLORE Seyahat Asistanı. 🧭<br><br>Size Türkiye'nin en büyüleyici rotaları, yerel deneyimler veya gezilecek şehirler hakkında bilgi vermek için 7/24 buradayım.<br><br>Merak ettiğiniz bir rota var mı? Aşağıdaki hızlı önerilere tıklayabilir veya bana doğrudan sorabilirsiniz.",
+        "chat_sugg_cap": "🎈 Kapadokya Rotası",
+        "chat_sugg_aeg": "🌊 Ege Kıyıları",
+        "chat_sugg_bla": "🌲 Karadeniz Rüyası",
+        "chat_sugg_ist": "🕌 İstanbul Gezisi",
+        "chat_sugg_act": "⛰️ Ne Yapabilirim?",
+        "chat_sugg_gui": "🧭 Rehberler Kimler?",
+        "chat_placeholder": "Bir seyahat sorusu yazın...",
+
+        "bot_resp_hello": "Merhaba! Harika bir gün dilerim. Size Türkiye'nin eşsiz köşelerini keşfetmenizde nasıl yardımcı olabilirim? Keşfetmek istediğiniz rotayı yazabilirsiniz.",
+        "bot_resp_cap": "🎈 <strong>Kapadokya Macerası Rotalarımız:</strong><br>- Sabah erken saatte <em>Sıcak Hava Balonu Turu</em> ile gün doğumunu izleyebilirsiniz.<br>- Günün devamında <em>Göreme Açık Hava Müzesi</em> ve devasa <em>Derinkuyu Yeraltı Şehri</em>'ni keşfedebilirsiniz.<br>- Akşamüstü ise <em>Kızılçukur Vadisi</em>'nde gün batımının tadını çıkarabilirsiniz.<br><br>Detaylı program için Rotalar kısmından 'Kapadokya\'yı Keşfet'e tıklayabilirsiniz!",
+        "bot_resp_aeg": "🌊 <strong>Ege Kıyıları Keşif Rotalarımız:</strong><br>- Güne el değmemiş gizli koylarda tekne turları ve taze bir köy kahvaltısı ile başlayın.<br>- Öğlen sıcağında muhteşem <em>Efes Antik Kenti</em>'ni veya yerel zeytinyağı tadım atölyelerini ziyaret edin.<br>- Akşam ise Alaçatı'nın taş sokaklarında yerel deniz ürünleri eşliğinde gurme deneyim yaşayın.<br><br>Detaylı program için Rotalar bölümümüzden 'Ege Kıyıları' kartını inceleyebilirsiniz.",
+        "bot_resp_bla": "🌲 <strong>Karadeniz Rüyası Rotalarımız:</strong><br>- Sisli yaylalarda (Pokut, Fırtına Vadisi) yöresel kahvaltı ve doğa yürüyüşü ile güne başlayın.<br>- Öğle vaktinde <em>Sümela Manastırı</em>'nın büyüleyici kayalık mimarisini keşfedin.<br>- Akşam ise ahşap dağ evlerinde yerel tulum dinletisi eşliğinde dinlenin.<br><br>Detaylı plan için Rotalar bölümünde 'Karadeniz Rüyası\'nı seçebilirsiniz.",
+        "bot_resp_ist": "🕌 <strong>İstanbul Gezi Rotalarımız:</strong><br>- Sabah tarihi yarımadada <em>Ayasofya</em> ve <em>Topkapı Sarayı</em> ile başlayın.<br>- Öğleden sonra büyüleyici bir <em>Boğaz Tekne Turu</em> yapıp Karaköy sokaklarında kahve keyfi yapabilirsiniz.<br>- Akşam ise Galata Kulesi manzaralı premium bir restoranda günü tamamlayabilirsiniz.<br><br>Detaylı program için Rotalar bölümünde 'İstanbul Gezisi\'ne göz atın.",
+        "bot_resp_act": "⛰️ <strong>Popüler Deneyimlerimiz:</strong><br>1. Kapadokya'da Balon Turu ve Çömlek Atölyesi.<br>2. Ege'de Efes Antik Kent Turu ve Zeytinyağı Atölyesi.<br>3. Karadeniz Yayla Yürüyüşleri ve Fırtına Deresi'nde Zipline/Rafting.<br>4. İstanbul Boğazı'nda gün batımı tekne turları.<br><br>Detaylı sabah-öğle-akşam aktivite listeleri için rotaların üzerindeki 'Rotayı Keşfet' butonunu kullanabilirsiniz.",
+        "bot_resp_gui": "🧭 <strong>Uzman Yerel Rehberlerimiz:</strong><br>Turlarımızda alanında uzman, tarihçi, doğa sporcusu ve gurme yerel rehberlerimiz size eşlik ediyor. Rehberlerimizin portfolyolarını, uzmanlık alanlarını ve kullanıcı yorumlarını sitemizin alt kısmındaki 'Rehberler' bölümünden inceleyebilirsiniz.",
+        "bot_resp_res": "✉️ <strong>Rezervasyon ve Detaylar:</strong><br>Rezervasyon taleplerinizi, rota modalının altındaki <em>'Bu Rotayı Planla'</em> butonu aracılığıyla veya ana sayfamızın en altındaki iletişim formunu doldurarak anında yapabilirsiniz. Seyahat planlama danışmanlarımız talebiniz doğrultusunda 24 saat içinde sizinle iletişime geçecektir.",
+        "bot_resp_con": "📞 <strong>Bize Ulaşın:</strong><br>E-posta: explore@platform.com<br>Telefon: +90 (212) 555 0199<br>Adres: Bebek, Cevdet Paşa Cd. No:80, Beşiktaş / İstanbul<br><br>Dilerseniz sayfa sonundaki formu kullanarak mesaj bırakabilirsiniz.",
+        "bot_resp_tnx": "Rica ederim! Keşfetmek bir tutkudur, sormak istediğiniz başka bir şey olursa her zaman buradayım. İyi seyahatler! 🧭✨",
+        "bot_resp_def": "Anlayamadım ama size seyahat konusunda yardımcı olmak çok isterim! 😊<br><br>Şu konuları sormayı deneyebilirsiniz:<br>- <strong>Kapadokya</strong>, <strong>Ege</strong>, <strong>Karadeniz</strong> veya <strong>İstanbul</strong> rotaları.<br>- Yapılacak <strong>aktiviteler</strong> veya yerel <strong>rehberler</strong>.<br>- <strong>Rezervasyon</strong> ve fiyatlandırma süreci.<br><br>Hızlı bilgi almak için sohbet alanının üzerindeki öneri çiplerine de tıklayabilirsiniz.",
+
     en: {
         // Nav
         "nav_routes": "Routes",
@@ -437,6 +462,31 @@ const translations = {
         "tag_paris_mont": "Paris Montmartre",
         "tag_flor_ren": "Florence Renaissance Tour",
         "tag_vatican_mus": "Vatican Museums",
+
+
+        // Chatbot
+        "chat_title": "EXPLORE Assistant",
+        "chat_status": "24/7 Online Guide",
+        "chat_welcome": "Hello! I am the EXPLORE Travel Assistant. 🧭<br><br>I am here 24/7 to give you information about Turkey's most fascinating routes, local experiences, or cities to visit.<br><br>Is there a route you are curious about? You can click on the quick suggestions below or ask me directly.",
+        "chat_sugg_cap": "🎈 Cappadocia Route",
+        "chat_sugg_aeg": "🌊 Aegean Coast",
+        "chat_sugg_bla": "🌲 Black Sea Dream",
+        "chat_sugg_ist": "🕌 Istanbul Trip",
+        "chat_sugg_act": "⛰️ What can I do?",
+        "chat_sugg_gui": "🧭 Who are the guides?",
+        "chat_placeholder": "Type a travel question...",
+
+        "bot_resp_hello": "Hello! Have a great day. How can I help you explore the unique corners of Turkey? You can write the route you want to explore.",
+        "bot_resp_cap": "🎈 <strong>Cappadocia Adventure Routes:</strong><br>- Watch the sunrise with a <em>Hot Air Balloon Tour</em> early in the morning.<br>- Later, explore the <em>Goreme Open Air Museum</em> and the massive <em>Derinkuyu Underground City</em>.<br>- In the afternoon, enjoy the sunset in <em>Kızılcukur Valley</em>.<br><br>Click 'Explore Cappadocia' in the Routes section for a detailed program!",
+        "bot_resp_aeg": "🌊 <strong>Aegean Coast Discovery Routes:</strong><br>- Start your day with a boat tour in untouched hidden bays and a fresh village breakfast.<br>- Visit the magnificent <em>Ephesus Ancient City</em> or local olive oil tasting workshops in the midday heat.<br>- In the evening, experience a gourmet dinner with local seafood in the stone streets of Alacatı.<br><br>You can review the 'Aegean Coast' card in our Routes section for a detailed program.",
+        "bot_resp_bla": "🌲 <strong>Black Sea Dream Routes:</strong><br>- Start the day with a local breakfast and nature walk in the misty highlands (Pokut, Firtina Valley).<br>- Discover the fascinating rock architecture of <em>Sumela Monastery</em> at noon.<br>- Rest in the evening in wooden mountain houses accompanied by a local tulum recital.<br><br>You can select 'Black Sea Dream' in the Routes section for a detailed plan.",
+        "bot_resp_ist": "🕌 <strong>Istanbul Tour Routes:</strong><br>- Start the morning in the historical peninsula with <em>Hagia Sophia</em> and <em>Topkapi Palace</em>.<br>- Take a fascinating <em>Bosphorus Boat Tour</em> in the afternoon and enjoy coffee in the streets of Karakoy.<br>- Complete the day at a premium restaurant with a view of the Galata Tower in the evening.<br><br>Check out 'Istanbul Trip' in the Routes section for a detailed program.",
+        "bot_resp_act": "⛰️ <strong>Our Popular Experiences:</strong><br>1. Balloon Tour and Pottery Workshop in Cappadocia.<br>2. Ephesus Ancient City Tour and Olive Oil Workshop in the Aegean.<br>3. Black Sea Highland Hikes and Zipline/Rafting on Firtina River.<br>4. Sunset boat tours on the Bosphorus in Istanbul.<br><br>You can use the 'Explore Route' button on the routes for detailed morning-noon-evening activity lists.",
+        "bot_resp_gui": "🧭 <strong>Our Expert Local Guides:</strong><br>Our tours are accompanied by expert historians, nature athletes, and gourmet local guides. You can review our guides' portfolios, areas of expertise, and user comments in the 'Guides' section at the bottom of our site.",
+        "bot_resp_res": "✉️ <strong>Reservation and Details:</strong><br>You can make your reservation requests instantly via the <em>'Plan This Route'</em> button under the route modal or by filling out the contact form at the bottom of our home page. Our travel planning consultants will contact you within 24 hours regarding your request.",
+        "bot_resp_con": "📞 <strong>Contact Us:</strong><br>Email: explore@platform.com<br>Phone: +90 (212) 555 0199<br>Address: Bebek, Cevdet Pasa Cd. No:80, Besiktas / Istanbul<br><br>You can leave a message using the form at the bottom of the page if you wish.",
+        "bot_resp_tnx": "You're welcome! Discovering is a passion, I am always here if there is anything else you want to ask. Have a good trip! 🧭✨",
+        "bot_resp_def": "I didn't understand, but I would love to help you with your travel! 😊<br><br>You can try asking about these topics:<br>- <strong>Cappadocia</strong>, <strong>Aegean</strong>, <strong>Black Sea</strong>, or <strong>Istanbul</strong> routes.<br>- <strong>Activities</strong> to do or local <strong>guides</strong>.<br>- <strong>Reservation</strong> and pricing process.<br><br>You can also click the suggestion chips above the chat area to get quick information.",
 
     }
 };

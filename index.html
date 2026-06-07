@@ -1436,10 +1436,10 @@
                         </svg>
                     </div>
                     <div class="chat-status-details">
-                        <h4>EXPLORE Asistan</h4>
+                        <h4 data-i18n="chat_title">EXPLORE Asistan</h4>
                         <span class="chat-status-indicator">
                             <span class="status-dot"></span>
-                            7/24 Çevrimiçi Rehber
+                            <span data-i18n="chat_status">7/24 Çevrimiçi Rehber</span>
                         </span>
                     </div>
                 </div>
@@ -1456,7 +1456,7 @@
                 <!-- Welcome Message from Bot -->
                 <div class="chat-msg bot-msg">
                     <div class="chat-msg-avatar">🧭</div>
-                    <div class="chat-msg-text">
+                    <div class="chat-msg-text" data-i18n="chat_welcome">
                         Merhaba! Ben EXPLORE Seyahat Asistanı. 🧭<br><br>Size Türkiye'nin en büyüleyici rotaları, yerel
                         deneyimler veya gezilecek şehirler hakkında bilgi vermek için 7/24 buradayım.<br><br>Merak
                         ettiğiniz bir rota var mı? Aşağıdaki hızlı önerilere tıklayabilir veya bana doğrudan
@@ -1468,18 +1468,18 @@
             <!-- Suggestion Chips -->
             <div class="chat-suggestions-container">
                 <div class="chat-suggestions" id="chat-suggestions">
-                    <button class="suggestion-chip" data-keyword="kapadokya">🎈 Kapadokya Rotası</button>
-                    <button class="suggestion-chip" data-keyword="ege">🌊 Ege Kıyıları</button>
-                    <button class="suggestion-chip" data-keyword="karadeniz">🌲 Karadeniz Rüyası</button>
-                    <button class="suggestion-chip" data-keyword="istanbul">🕌 İstanbul Gezisi</button>
-                    <button class="suggestion-chip" data-keyword="aktiviteler">⛰️ Ne Yapabilirim?</button>
-                    <button class="suggestion-chip" data-keyword="rehber">🧭 Rehberler Kimler?</button>
+                    <button class="suggestion-chip" data-keyword="kapadokya" data-i18n="chat_sugg_cap">🎈 Kapadokya Rotası</button>
+                    <button class="suggestion-chip" data-keyword="ege" data-i18n="chat_sugg_aeg">🌊 Ege Kıyıları</button>
+                    <button class="suggestion-chip" data-keyword="karadeniz" data-i18n="chat_sugg_bla">🌲 Karadeniz Rüyası</button>
+                    <button class="suggestion-chip" data-keyword="istanbul" data-i18n="chat_sugg_ist">🕌 İstanbul Gezisi</button>
+                    <button class="suggestion-chip" data-keyword="aktiviteler" data-i18n="chat_sugg_act">⛰️ Ne Yapabilirim?</button>
+                    <button class="suggestion-chip" data-keyword="rehber" data-i18n="chat_sugg_gui">🧭 Rehberler Kimler?</button>
                 </div>
             </div>
 
             <!-- Footer Input -->
             <div class="chat-footer">
-                <input type="text" id="chat-input" placeholder="Bir seyahat sorusu yazın..." autocomplete="off">
+                <input type="text" id="chat-input" placeholder="Bir seyahat sorusu yazın..." autocomplete="off" data-i18n="chat_placeholder">
                 <button class="chat-send-btn" id="chat-send-btn" aria-label="Gönder">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -1599,9 +1599,9 @@
         </div>
     </div>
 
-    <script src="i18n.js?v=2.1"></script>
+    <script src="i18n.js?v=3.0"></script>
     <script src="tagData.js?v=1.0"></script>
-    <script src="script.js?v=3.4"></script>
+    <script src="script.js?v=4.0"></script>
 </body>
 
 </html>

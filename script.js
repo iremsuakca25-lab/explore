@@ -2362,37 +2362,37 @@ function initChatbot() {
             .replace(/ç/g, 'c');
 
         if (text.includes('merhaba') || text.includes('selam') || text.includes('hello') || text.includes('hey')) {
-            return "Merhaba! Harika bir gün dilerim. Size Türkiye'nin eşsiz köşelerini keşfetmenizde nasıl yardımcı olabilirim? Keşfetmek istediğiniz rotayı yazabilirsiniz.";
+            return translations[currentLang]['bot_resp_hello'];
         }
         if (text.includes('kapadokya') || text.includes('peri baca')) {
-            return "🎈 <strong>Kapadokya Macerası Rotalarımız:</strong><br>- Sabah erken saatte <em>Sıcak Hava Balonu Turu</em> ile gün doğumunu izleyebilirsiniz.<br>- Günün devamında <em>Göreme Açık Hava Müzesi</em> ve devasa <em>Derinkuyu Yeraltı Şehri</em>'ni keşfedebilirsiniz.<br>- Akşamüstü ise <em>Kızılçukur Vadisi</em>'nde gün batımının tadını çıkarabilirsiniz.<br><br>Detaylı program için Rotalar kısmından 'Kapadokya'yı Keşfet'e tıklayabilirsiniz!";
+            return translations[currentLang]['bot_resp_cap'];
         }
         if (text.includes('ege') || text.includes('izmir') || text.includes('mugla') || text.includes('bodrum') || text.includes('deniz') || text.includes('koy')) {
-            return "🌊 <strong>Ege Kıyıları Keşif Rotalarımız:</strong><br>- Güne el değmemiş gizli koylarda tekne turları ve taze bir köy kahvaltısı ile başlayın.<br>- Öğlen sıcağında muhteşem <em>Efes Antik Kenti</em>'ni veya yerel zeytinyağı tadım atölyelerini ziyaret edin.<br>- Akşam ise Alaçatı'nın taş sokaklarında yerel deniz ürünleri eşliğinde gurme deneyim yaşayın.<br><br>Detaylı program için Rotalar bölümümüzden 'Ege Kıyıları' kartını inceleyebilirsiniz.";
+            return translations[currentLang]['bot_resp_aeg'];
         }
         if (text.includes('karadeniz') || text.includes('rize') || text.includes('trabzon') || text.includes('yayla') || text.includes('doga')) {
-            return "🌲 <strong>Karadeniz Rüyası Rotalarımız:</strong><br>- Sisli yaylalarda (Pokut, Fırtına Vadisi) yöresel kahvaltı ve doğa yürüyüşü ile güne başlayın.<br>- Öğle vaktinde <em>Sümela Manastırı</em>'nın büyüleyici kayalık mimarisini keşfedin.<br>- Akşam ise ahşap dağ evlerinde yerel tulum dinletisi eşliğinde dinlenin.<br><br>Detaylı plan için Rotalar bölümünde 'Karadeniz Rüyası'nı seçebilirsiniz.";
+            return translations[currentLang]['bot_resp_bla'];
         }
         if (text.includes('istanbul') || text.includes('bogaz') || text.includes('tarihi yariada') || text.includes('galata')) {
-            return "🕌 <strong>İstanbul Gezi Rotalarımız:</strong><br>- Sabah tarihi yarımadada <em>Ayasofya</em> ve <em>Topkapı Sarayı</em> ile başlayın.<br>- Öğleden sonra büyüleyici bir <em>Boğaz Tekne Turu</em> yapıp Karaköy sokaklarında kahve keyfi yapabilirsiniz.<br>- Akşam ise Galata Kulesi manzaralı premium bir restoranda günü tamamlayabilirsiniz.<br><br>Detaylı program için Rotalar bölümünde 'İstanbul Gezisi'ne göz atın.";
+            return translations[currentLang]['bot_resp_ist'];
         }
         if (text.includes('aktivite') || text.includes('ne yapabilirim') || text.includes('macera') || text.includes('deneyim')) {
-            return "⛰️ <strong>Popüler Deneyimlerimiz:</strong><br>1. Kapadokya'da Balon Turu ve Çömlek Atölyesi.<br>2. Ege'de Efes Antik Kent Turu ve Zeytinyağı Atölyesi.<br>3. Karadeniz Yayla Yürüyüşleri ve Fırtına Deresi'nde Zipline/Rafting.<br>4. İstanbul Boğazı'nda gün batımı tekne turları.<br><br>Detaylı sabah-öğle-akşam aktivite listeleri için rotaların üzerindeki 'Rotayı Keşfet' butonunu kullanabilirsiniz.";
+            return translations[currentLang]['bot_resp_act'];
         }
         if (text.includes('rehber') || text.includes('guide') || text.includes('kimler')) {
-            return "🧭 <strong>Uzman Yerel Rehberlerimiz:</strong><br>Turlarımızda alanında uzman, tarihçi, doğa sporcusu ve gurme yerel rehberlerimiz size eşlik ediyor. Rehberlerimizin portfolyolarını, uzmanlık alanlarını ve kullanıcı yorumlarını sitemizin alt kısmındaki 'Rehberler' bölümünden inceleyebilirsiniz.";
+            return translations[currentLang]['bot_resp_gui'];
         }
         if (text.includes('fiyat') || text.includes('ucret') || text.includes('rezervasyon') || text.includes('kayit') || text.includes('satin al') || text.includes('bilet') || text.includes('rezerv')) {
-            return "✉️ <strong>Rezervasyon ve Detaylar:</strong><br>Rezervasyon taleplerinizi, rota modalının altındaki <em>'Bu Rotayı Planla'</em> butonu aracılığıyla veya ana sayfamızın en altındaki iletişim formunu doldurarak anında yapabilirsiniz. Seyahat planlama danışmanlarımız talebiniz doğrultusunda 24 saat içinde sizinle iletişime geçecektir.";
+            return translations[currentLang]['bot_resp_res'];
         }
         if (text.includes('iletisim') || text.includes('telefon') || text.includes('adres') || text.includes('eposta') || text.includes('mail') || text.includes('konum')) {
-            return "📞 <strong>Bize Ulaşın:</strong><br>E-posta: explore@platform.com<br>Telefon: +90 (212) 555 0199<br>Adres: Bebek, Cevdet Paşa Cd. No:80, Beşiktaş / İstanbul<br><br>Dilerseniz sayfa sonundaki formu kullanarak mesaj bırakabilirsiniz.";
+            return translations[currentLang]['bot_resp_con'];
         }
         if (text.includes('tesekkur') || text.includes('sagol') || text.includes('harika') || text.includes('iyi gunler') || text.includes('ok') || text.includes('tamam')) {
-            return "Rica ederim! Keşfetmek bir tutkudur, sormak istediğiniz başka bir şey olursa her zaman buradayım. İyi seyahatler! 🧭✨";
+            return translations[currentLang]['bot_resp_tnx'];
         }
 
-        return "Anlayamadım ama size seyahat konusunda yardımcı olmak çok isterim! 😊<br><br>Şu konuları sormayı deneyebilirsiniz:<br>- <strong>Kapadokya</strong>, <strong>Ege</strong>, <strong>Karadeniz</strong> veya <strong>İstanbul</strong> rotaları.<br>- Yapılacak <strong>aktiviteler</strong> veya yerel <strong>rehberler</strong>.<br>- <strong>Rezervasyon</strong> ve fiyatlandırma süreci.<br><br>Hızlı bilgi almak için sohbet alanının üzerindeki öneri çiplerine de tıklayabilirsiniz.";
+        return translations[currentLang]['bot_resp_def'];
     }
 
     // Register Custom Cursor hover states for chatbot elements
