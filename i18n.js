@@ -217,7 +217,6 @@ const translations = {
         "tag_paris_mont": "Paris Montmartre",
         "tag_flor_ren": "Floransa Rönesans Turu",
         "tag_vatican_mus": "Vatikan Müzeleri",
-    },
 
         // Chatbot
         "chat_title": "EXPLORE Asistan",
@@ -243,6 +242,7 @@ const translations = {
         "bot_resp_tnx": "Rica ederim! Keşfetmek bir tutkudur, sormak istediğiniz başka bir şey olursa her zaman buradayım. İyi seyahatler! 🧭✨",
         "bot_resp_def": "Anlayamadım ama size seyahat konusunda yardımcı olmak çok isterim! 😊<br><br>Şu konuları sormayı deneyebilirsiniz:<br>- <strong>Kapadokya</strong>, <strong>Ege</strong>, <strong>Karadeniz</strong> veya <strong>İstanbul</strong> rotaları.<br>- Yapılacak <strong>aktiviteler</strong> veya yerel <strong>rehberler</strong>.<br>- <strong>Rezervasyon</strong> ve fiyatlandırma süreci.<br><br>Hızlı bilgi almak için sohbet alanının üzerindeki öneri çiplerine de tıklayabilirsiniz.",
 
+    },
     en: {
         // Nav
         "nav_routes": "Routes",
