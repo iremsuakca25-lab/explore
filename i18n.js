@@ -143,8 +143,6 @@ const translations = {
         "footer_contact": "Bize Ulaşın",
         "footer_faq": "SSS",
         "footer_copyright": "© 2026 EXPLORE. Tüm hakları saklıdır.",
-    },
-
         // Added Routes Titles & Seasons
         "route_capadocia_title": "Kapadokya Macerası",
         "route_aegean_title": "Ege Kıyıları",
@@ -219,7 +217,7 @@ const translations = {
         "tag_paris_mont": "Paris Montmartre",
         "tag_flor_ren": "Floransa Rönesans Turu",
         "tag_vatican_mus": "Vatikan Müzeleri",
-
+    },
     en: {
         // Nav
         "nav_routes": "Routes",
